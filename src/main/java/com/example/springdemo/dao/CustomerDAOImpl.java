@@ -21,9 +21,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private SessionFactory sessionFactory;
 	
 	@Override
-	// "Transactional" annotation will begin and end transaction automatically for us as this
-	// method starts and stops.
-	@Transactional
 	public List<Customer> getCustomers() {
 		Session currentSession = sessionFactory.getCurrentSession();
 		
